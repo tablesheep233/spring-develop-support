@@ -116,6 +116,7 @@
     <modules>
         <module>spring-develop-support-dependencies</module>
         <module>spring-develop-support-commons</module>
+        <module>spring-develop-support-context</module>
     </modules>
 
 </project>
