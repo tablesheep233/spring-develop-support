@@ -1,8 +1,8 @@
 package com.github.tablesheep233.spring.context;
 
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationContextException;
 
 /**
@@ -28,6 +28,7 @@ public class SpringApplicationContextHolder {
                     "Invalid application context: needs to be of type [" + ApplicationContext.class.getName() + "]");
         }
         SpringApplicationContextHolder.APPLICATION_CONTEXT = applicationContext;
+        LogFactory.getLog(SpringApplicationContextHolder.class).info("SpringApplicationContextHolder is ready");
     }
 
     /**

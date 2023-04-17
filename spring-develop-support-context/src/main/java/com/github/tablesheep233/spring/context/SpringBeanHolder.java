@@ -22,7 +22,7 @@ public final class SpringBeanHolder<T> {
      * @param clazz the clazz
      * @return the object
      */
-    public static Object hold(Class<?> clazz) {
+    public static SpringBeanHolder<?> hold(Class<?> clazz) {
         return HOLDER_CACHE.computeIfAbsent(HolderKey.of(clazz, null), t -> new SpringBeanHolder<>(clazz));
     }
 
@@ -33,7 +33,7 @@ public final class SpringBeanHolder<T> {
      * @param supplier the supplier
      * @return the object
      */
-    public static <T> Object hold(Class<T> clazz, Supplier<T> supplier) {
+    public static <T> SpringBeanHolder<?> hold(Class<T> clazz, Supplier<T> supplier) {
         return HOLDER_CACHE.computeIfAbsent(HolderKey.of(clazz, supplier), t -> new SpringBeanHolder<>(clazz, supplier));
     }
 

@@ -23,6 +23,11 @@
                 <artifactId>spring-develop-support-commons</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.tablesheep233</groupId>
+                <artifactId>spring-develop-support-context</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

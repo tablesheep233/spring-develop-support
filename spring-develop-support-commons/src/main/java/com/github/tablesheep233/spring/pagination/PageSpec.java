@@ -2,6 +2,7 @@ package com.github.tablesheep233.spring.pagination;
 
 /**
  * The type Page spec.
+ *
  * @author tablesheep233
  */
 public class PageSpec {

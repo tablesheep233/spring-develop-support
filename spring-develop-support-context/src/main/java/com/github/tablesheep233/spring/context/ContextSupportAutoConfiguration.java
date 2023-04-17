@@ -1,15 +1,17 @@
 package com.github.tablesheep233.spring.context;
 
 import org.springframework.beans.BeansException;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * The type Context config auto configuration.
+ * The type Context support auto configuration.
+ *
+ * @author tablesheep233
  */
-@Configuration
-public class ContextConfigAutoConfiguration implements ApplicationContextAware {
+@AutoConfiguration
+public class ContextSupportAutoConfiguration implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         SpringApplicationContextHolder.refresh(applicationContext);
